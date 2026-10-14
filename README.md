@@ -5,8 +5,8 @@ can post, view, update, and manage research opportunities. Built with
 **Node.js + Express** (backend REST API), **MySQL** (database), and
 **HTML/CSS/JavaScript** (frontend).
 
-GitHub Repository: https://github.com/USERNAME/research-opportunity-portal
-*(replace USERNAME with your GitHub username after pushing)*
+GitHub Repository: https://github.com/SHIFA-AHMED-KHAN/research-portal
+
 
 ## Project structure
 
