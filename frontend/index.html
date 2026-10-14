@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Research Opportunity Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>University Research Opportunity Portal</h1>
+      <p class="subtitle">Faculty research openings, all in one place.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="message" class="message hidden"></div>
+
+    <section class="card">
+      <h2>Post a New Research Opportunity</h2>
+      <form id="create-form" novalidate>
+        <div class="grid">
+          <label>Research Title *
+            <input type="text" id="f-title" required maxlength="255" />
+          </label>
+          <label>Research Area *
+            <input type="text" id="f-area" required maxlength="255" placeholder="e.g. Machine Learning" />
+          </label>
+          <label>Faculty Member *
+            <input type="text" id="f-faculty" required maxlength="255" />
+          </label>
+          <label>Department *
+            <input type="text" id="f-dept" required maxlength="255" placeholder="e.g. Computer Science" />
+          </label>
+          <label>Required Skills
+            <input type="text" id="f-skills" maxlength="500" placeholder="e.g. Python, Statistics" />
+          </label>
+          <label>Available Positions *
+            <input type="number" id="f-positions" required min="1" value="1" />
+          </label>
+          <label>Application Deadline *
+            <input type="date" id="f-deadline" required />
+          </label>
+          <label>Status
+            <select id="f-status">
+              <option value="Open" selected>Open</option>
+              <option value="Closed">Closed</option>
+            </select>
+          </label>
+        </div>
+        <label class="full">Research Description *
+          <textarea id="f-desc" required rows="4" placeholder="What is this research about?"></textarea>
+        </label>
+        <button type="submit" class="btn primary">Post Opportunity</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-head">
+        <h2>Available Opportunities</h2>
+        <button id="refresh-btn" class="btn">Refresh</button>
+      </div>
+      <div id="list" class="list"></div>
+    </section>
+  </main>
+
+  <!-- Detail / edit dialog -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <div id="modal-body"></div>
+      <div class="modal-actions">
+        <button id="modal-close" class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="wrap footer">
+    <p>CN Assignment #01 &middot; BCS-5C &middot; Research Opportunity Portal</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
